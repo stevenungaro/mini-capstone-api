@@ -1,6 +1,7 @@
 class ProductsController < ApplicationController
   def all_products
-    render json: Product.all.as_json
+    @products = Product.all
+    render template: "products/index"
   end
 
   def random_product
@@ -8,7 +9,7 @@ class ProductsController < ApplicationController
   end
 
   def productbyid
-    product = Product.find_by(id: params["id"])
-    render json: product.as_json
+    @product = Product.find_by(id: params["id"])
+    render template: "products/show"
   end
 end
