@@ -5,4 +5,6 @@ Rails.application.routes.draw do
   # root "articles#index"
 
   get "/all_products", controller: "products", action: "all_products"
+
+  get "/random_product", controller: "products", action: "random_product"
 end
