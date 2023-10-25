@@ -6,4 +6,9 @@ class ProductsController < ApplicationController
   def random_product
     render json: Product.all.sample.as_json
   end
+
+  def productbyid
+    product = Product.find_by(id: params["id"])
+    render json: product.as_json
+  end
 end
