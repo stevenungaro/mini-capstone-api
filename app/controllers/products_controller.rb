@@ -1,15 +1,21 @@
 class ProductsController < ApplicationController
-  def all_products
+  def index
     @products = Product.all
     render template: "products/index"
   end
 
-  def random_product
-    render json: Product.all.sample.as_json
+  def show
+    @product = Product.find_by(id: params["id"])
+    render template: "products/show"
   end
 
-  def productbyid
-    @product = Product.find_by(id: params["id"])
+  def create
+    @product = Product.create(
+      name: params["name"],
+      price: params["price"],
+      image_url: params["image_url"],
+      description: params["description"],
+    )
     render template: "products/show"
   end
 end
