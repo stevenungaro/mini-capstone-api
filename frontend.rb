@@ -1,11 +1,12 @@
 require "HTTP"
 require "tty-table"
 
-puts "Hello, would you like to see all products or create a product?:"
+puts "Hello, would you like to see all products, create a product, or update a product?:"
 puts "[1] All"
 puts "[2] Create"
+puts "[3] Update"
 
-print "Please enter 1 or 2: "
+print "Please choose 1, 2, or 3: "
 answer = gets.chomp.to_i
 
 if answer == 1
@@ -27,6 +28,10 @@ elsif answer == 2
   #table = TTY::Table.new(response)
   #puts table.render(:unicode)
   #pp response.parse
+  # elsif answer == 3
+  #   print "What is the id of the product you want to update?: "
+  #   id_answer = gets.chomp.to_i
+
 else
   puts "You didn't enter a valid option."
 end
