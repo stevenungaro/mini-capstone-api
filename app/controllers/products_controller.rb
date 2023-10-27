@@ -29,4 +29,11 @@ class ProductsController < ApplicationController
     )
     render template: "products/show"
   end
+
+  def destroy
+    #cast it into the fire
+    product = Product.find_by(id: params["id"])
+    product.destroy
+    render json: { message: "You did it. It's gone!" }
+  end
 end
