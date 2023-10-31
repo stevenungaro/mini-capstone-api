@@ -15,8 +15,13 @@ class ProductsController < ApplicationController
       price: params["price"],
       image_url: params["image_url"],
       description: params["description"],
+      inventory: params["inventory"],
     )
-    render template: "products/show"
+    if @product.valid?
+      render template: "products/show"
+    else
+      render json: { errors: @product.errors.full_messages }, status: 422
+    end
   end
 
   def update
@@ -26,8 +31,14 @@ class ProductsController < ApplicationController
       price: params["price"] || @product.price,
       image_url: params["image_url"] || @product.image_url,
       description: params["description"] || @product.description,
+      inventory: params["inventory"] || @product.inventory,
     )
-    render template: "products/show"
+
+    if @product.valid?
+      render template: "products/show"
+    else
+      render json: { errors: @product.errors.full_messages }, status: 422
+    end
   end
 
   def destroy
