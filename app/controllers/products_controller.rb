@@ -16,6 +16,7 @@ class ProductsController < ApplicationController
       image_url: params["image_url"],
       description: params["description"],
       inventory: params["inventory"],
+      supplier_id: params["supplier_id"],
     )
     if @product.valid?
       render template: "products/show"

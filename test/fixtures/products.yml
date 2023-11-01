@@ -3,11 +3,15 @@
 one:
   name: MyString
   price: 1
-  image_url: MyString
+  image_url: MyString.jpg
   description: MyDescriptionString
+  inventory: 1
+  supplier: one
 
 two:
   name: MyString
   price: 1
-  image_url: MyString
+  image_url: MyString.jpg
   description: MyDescriptionString
+  inventory: 1
+  supplier: one
