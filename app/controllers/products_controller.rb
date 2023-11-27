@@ -2,14 +2,19 @@ class ProductsController < ApplicationController
   before_action :authenticate_admin, except: [:index, :show]
 
   def index
-    @products = Product.all
-    render template: "products/index"
-    pp current_user
+    if params["category"]
+      category = Category.find_by(name: params[:category])
+      @products = category.products
+    else
+      @products = Product.all
+    end
+
+    render :index
   end
 
   def show
     @product = Product.find_by(id: params["id"])
-    render template: "products/show"
+    render :show
   end
 
   def create
@@ -22,7 +27,7 @@ class ProductsController < ApplicationController
     )
     if @product.valid?
       Image.create(url: params[:image_url], product_id: @product.id)
-      render template: "products/show"
+      render :show
     else
       render json: { errors: @product.errors.full_messages }, status: 422
     end
