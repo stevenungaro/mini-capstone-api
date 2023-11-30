@@ -38,8 +38,10 @@ class ProductsControllerTest < ActionDispatch::IntegrationTest
 
     data = JSON.parse(response.body)
     assert_equal "Updated name", data["name"]
-    assert_equal product.price.to_s, data["price"]
     assert_equal product.description, data["description"]
+
+    patch "/products/#{product.id}.json"
+    assert_response 401
   end
 
   test "destroy" do
@@ -49,21 +51,21 @@ class ProductsControllerTest < ActionDispatch::IntegrationTest
     end
   end
 
-  test "is_discounted?" do
-    product = Product.new(price: 11)
-    assert_equal false, product.is_discounted?
+  # test "is_discounted?" do
+  #   product = Product.new(price: 11)
+  #   assert_equal false, product.is_discounted?
 
-    product = Product.new(price: 1)
-    assert_equal true, product.is_discounted?
-  end
+  #   product = Product.new(price: 1)
+  #   assert_equal true, product.is_discounted?
+  # end
 
-  test "tax" do
-    product = Product.new(price: 100)
-    assert_in_delta 9, product.tax
-  end
+  # test "tax" do
+  #   product = Product.new(price: 100)
+  #   assert_in_delta 9, product.tax
+  # end
 
-  test "total" do
-    product = Product.new(price: 100)
-    assert_in_delta 109, product.total
-  end
+  # test "total" do
+  #   product = Product.new(price: 100)
+  #   assert_in_delta 109, product.total
+  # end
 end

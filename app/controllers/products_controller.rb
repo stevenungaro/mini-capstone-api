@@ -40,10 +40,11 @@ class ProductsController < ApplicationController
       price: params["price"] || @product.price,
       description: params["description"] || @product.description,
       inventory: params["inventory"] || @product.inventory,
+      supplier_id: params[:supplier_id] || @product.supplier_id,
     )
 
     if @product.valid?
-      render template: "products/show"
+      render :show
     else
       render json: { errors: @product.errors.full_messages }, status: 422
     end
