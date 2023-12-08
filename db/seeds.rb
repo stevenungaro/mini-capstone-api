@@ -71,8 +71,6 @@ Image.create!([
   { url: "https://cf.geekdo-images.com/0_KEDk4lCvryf1Ju3YQJxA__imagepagezoom/img/H3oVFcAVrMkUkvBXWbhI_P899wU=/fit-in/1200x900/filters:no_upscale():strip_icc()/pic3339551.jpg", product_id: 11 },
   { url: "https://cf.geekdo-images.com/5rRSTD9375tnwNUfJOBRRg__imagepagezoom/img/xAMzyrs0ojN31fkYJNtfwX54EWc=/fit-in/1200x900/filters:no_upscale():strip_icc()/pic178092.jpg", product_id: 13 },
   { url: "https://cf.geekdo-images.com/9E3n5SxxXKiUdRUw03EVvQ__imagepagezoom/img/yajKFnkvpChWSuU3upUkJEowufI=/fit-in/1200x900/filters:no_upscale():strip_icc()/pic166867.jpg", product_id: 13 },
-  { url: "https://cf.geekdo-images.com/6GqH14TJJhza86BX5HCLEQ__imagepagezoom/img/KSw9NO99xtXI2yKI9jp7yyWw6M0=/fit-in/1200x900/filters:no_upscale():strip_icc()/pic5674958.jpg", product_id: 14 },
-  { url: nil, product_id: 15 },
 ])
 CategoryProduct.create!([
   { product_id: 1, category_id: 2 },
