@@ -72,6 +72,13 @@ Image.create!([
   { url: "https://cf.geekdo-images.com/5rRSTD9375tnwNUfJOBRRg__imagepagezoom/img/xAMzyrs0ojN31fkYJNtfwX54EWc=/fit-in/1200x900/filters:no_upscale():strip_icc()/pic178092.jpg", product_id: 13 },
   { url: "https://cf.geekdo-images.com/9E3n5SxxXKiUdRUw03EVvQ__imagepagezoom/img/yajKFnkvpChWSuU3upUkJEowufI=/fit-in/1200x900/filters:no_upscale():strip_icc()/pic166867.jpg", product_id: 13 },
 ])
+Category.create!([
+  { name: "cards" },
+  { name: "tiles" },
+  { name: "economic" },
+  { name: "dexterity" },
+  { name: "abstract" },
+])
 CategoryProduct.create!([
   { product_id: 1, category_id: 2 },
   { product_id: 1, category_id: 5 },
@@ -80,13 +87,6 @@ CategoryProduct.create!([
   { product_id: 5, category_id: 5 },
   { product_id: 7, category_id: 4 },
   { product_id: 7, category_id: 5 },
-])
-Category.create!([
-  { name: "cards" },
-  { name: "tiles" },
-  { name: "economic" },
-  { name: "dexterity" },
-  { name: "abstract" },
 ])
 CartedProduct.create!([
   { user_id: 1, product_id: 1, quantity: 2, status: "carted", order_id: nil },
