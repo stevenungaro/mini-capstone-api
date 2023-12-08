@@ -1,10 +1,10 @@
-# User.create!([
-#   { name: "Steven", email: "test@test.com", password: "password1", admin: true },
-#   { name: "Steven", email: "test2@test.com", password: "password1", admin: false },
-#   { name: "Rachel", email: "test3@test.com", password: "password1", admin: false },
-#   { name: "Stevie", email: "test4@test.com", password: "password1", admin: false },
-#   { name: "Steveo", email: "test5@test.com", password: "password1", admin: false },
-# ])
+User.create!([
+  { name: "Steven", email: "test@test.com", password: "password1", admin: true },
+  { name: "Steven", email: "test2@test.com", password: "password1", admin: false },
+  { name: "Rachel", email: "test3@test.com", password: "password1", admin: false },
+  { name: "Stevie", email: "test4@test.com", password: "password1", admin: false },
+  { name: "Steveo", email: "test5@test.com", password: "password1", admin: false },
+])
 Supplier.create!([
   { name: "Game Store One", email: "games@test.com", phone_number: "222-555-9999" },
   { name: "Game Store Two", email: "game2s@test.com", phone_number: "222-555-2222" },
@@ -91,5 +91,5 @@ Category.create!([
 CartedProduct.create!([
   { user_id: 1, product_id: 1, quantity: 2, status: "carted", order_id: nil },
   { user_id: 1, product_id: 2, quantity: 3, status: "carted", order_id: nil },
-  { user_id: 1, product_id: 12, quantity: 3, status: "carted", order_id: nil },
+  { user_id: 1, product_id: 3, quantity: 3, status: "carted", order_id: nil },
 ])
