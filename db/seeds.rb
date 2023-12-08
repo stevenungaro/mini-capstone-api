@@ -1,10 +1,10 @@
-User.create!([
-  { name: "Steven", email: "test@test.com", password: "password1", admin: true },
-  { name: "Steven", email: "test2@test.com", password: "password1", admin: false },
-  { name: "Rachel", email: "test3@test.com", password: "password1", admin: false },
-  { name: "Stevie", email: "test4@test.com", password: "password1", admin: false },
-  { name: "Steveo", email: "test5@test.com", password: "password1", admin: false },
-])
+# User.create!([
+#   { name: "Steven", email: "test@test.com", password: "password1", admin: true },
+#   { name: "Steven", email: "test2@test.com", password: "password1", admin: false },
+#   { name: "Rachel", email: "test3@test.com", password: "password1", admin: false },
+#   { name: "Stevie", email: "test4@test.com", password: "password1", admin: false },
+#   { name: "Steveo", email: "test5@test.com", password: "password1", admin: false },
+# ])
 Supplier.create!([
   { name: "Game Store One", email: "games@test.com", phone_number: "222-555-9999" },
   { name: "Game Store Two", email: "game2s@test.com", phone_number: "222-555-2222" },
